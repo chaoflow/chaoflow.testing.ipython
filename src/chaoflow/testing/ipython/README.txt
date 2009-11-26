@@ -8,15 +8,19 @@ based on interlude.
 Usage
 =====
 
-    >>> from chaoflow.testing.ipython import ipshell
+    >>> from chaoflow.testing.ipython import ipshell, dtipshell
 
-By default you will get a prompt suitable to copy/paste for doctests.
+By default you will get the default fancy ipython prompt:
 
     >>> ipshell( locals())
 
-In order to get the default ipython prompt, pass doctest=False:
+In order to get a prompt suitable for doctest generation, pass doctest=True:
 
-    >>> ipshell( locals(), doctest=False)
+    >>> ipshell( locals(), doctest=True)
+
+or use dtipshell, which does exactly that:
+
+    >>> dtipshell( locals())
 
 
 License

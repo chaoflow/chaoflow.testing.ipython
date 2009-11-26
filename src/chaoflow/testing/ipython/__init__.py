@@ -26,11 +26,10 @@ import sys
 from IPython.Shell import IPShellEmbed
 
 
-def ipshell(locals=None, doctest=True):
-    """
-        >>> ipshell( locals())
+def ipshell(locals=None, doctest=False):
+    """Use ipython interactively in your doctest
 
-        >>> ipshell( locals(), doctest=False)
+    doctest=True turns on doctest mode, i.e. >>> instead of fancy ipython prompt
     """
     argv = []
     if doctest:
@@ -51,3 +50,6 @@ end of IPython DocTest Interactive Console session
     sys.stdout = sys.stderr
     shell(local_ns=locals)
     sys.stdout = savedstdout
+
+def dtipshell(locals=None):
+    ipshell(locals, doctest=True)

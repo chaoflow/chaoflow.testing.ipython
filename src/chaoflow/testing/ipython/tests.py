@@ -8,7 +8,7 @@ from chaoflow.testing.crawler import create_test_suite
 # all .py files are found
 # all .txt files with corresponding .py file are found
 files = [
-#        'README.txt'
+        'README.txt'
         ]
 
 # We assume that this modules is in the root of your package
