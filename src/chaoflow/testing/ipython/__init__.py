@@ -37,13 +37,13 @@ def ipshell(locals=None, doctest=True):
     shell = IPShellEmbed(
             argv=argv,
             banner='\n'+'='*78+"""
-    IPython DocTest Interactive Console
-    Note: You have the same locals available as in your test-case. 
-    Ctrl-D ends session and continues testing.
-    """,
+IPython DocTest Interactive Console
+Note: You have the same locals available as in your test-case. 
+Ctrl-D ends session and continues testing.
+""",
             exit_msg="""
-    end of IPython DocTest Interactive Console session
-    """+'='*78+'\n',
+end of IPython DocTest Interactive Console session
+"""+'='*78+'\n',
             )
 
     savedstdout = sys.stdout
